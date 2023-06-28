@@ -1,51 +1,351 @@
- body{
-     margin: 0;
-     padding: 0;
- }
- .container{
-     height: 100vh;
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-     align-items: center;
- }
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 
- .item{
-     height: 600px;
-     width: 600px;
-     background: blanchedalmond;
-     margin: 5px;
+.item{
+    height: 600px;
+    width: 600px;
+    background: blanchedalmond;
+    margin:5px;
+}
 
- }
- .item-1,.item-2,.item-3,.item-4,.item-5,.item-6{
-    margin: auto;
-    position: relative;
-    top:300px;
- }
+.item-1,.item-2,.item-3,.item-4,.item-5,.item-6{
+   margin: auto;
+   position: relative;
+   top:300px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 
- .item-1{
-    width: 100px;
-    height: 100px;
-    background: transparent;
-    border-radius: 50%;
-    border-top: 5px solid red;
-    transform: rotate(360deg) ;
+}
 
-    
- }
- .item-1-1{
-    margin: auto;
-    position: relative;
-    top:210px;
-    width: 80px;
-    height: 80px;
-    background: transparent;
-    border-radius: 50%;
-    border-top: 5px solid yellow;
-    transform: rotate(-360deg);
- }
- /* Animation: rotation*/ 
+.item-1{
+   width: 100px;
+   height: 100px;
+   background: transparent;
+   border-radius: 50%;
+   border-top: 5px solid red;
+   animation: loading1 0.7s infinite;
+   animation-fill-mode:forwards;
+   transition: all 0.1s ease-in-out ;
+}
+
+.item-1-1{
+   margin: auto;
+   position: relative;
+   top: 210px;
+   width: 80px;
+   height: 80px;
+   background: transparent;
+   border-radius: 50%;
+   border-top: 5px solid yellow;
+   animation: loading11 0.7s infinite;
+   animation-fill-mode:forwards;
+   transition: all 2s ease-in-out ;
+}
+/* Animation: rotation*/ 
+@keyframes loading11 {
+   0%{
+       transform: rotate(-10deg);
+       opacity: 0.9;
+     
+   }
  
+   25%{
+     transform: rotate(-50deg);
+     
+     opacity: 0.5;
+   }
+   75%{
+     transform: rotate(-150deg);
+     opacity: 0.2;
+   }
+   100%{
+     transform: rotate(-360deg);
+     
+     opacity: 0.1;
+   }
+ }
+
+ @keyframes loading1 {
+   0%{
+       transform: rotate(10deg);
+       opacity: 0.1;
+     
+   }
+ 
+   25%{
+     transform: rotate(50deg);
+     
+     opacity: 0.2;
+   }
+   75%{
+     transform: rotate(150deg);
+    
+     opacity: 0.5;
+   }
+   100%{
+     transform: rotate(360deg);
+     
+     opacity: 0.9;
+   }
+ }
+ .item21,.item22,.item23{
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top: 3px solid red;
+    border-radius: 50%;
+    margin: 5px;
+    position: relative;
+}
+
+.item21{
+
+    animation: loading21 0.7s infinite;
+    animation-fill-mode:forwards;
+    transition: all 2s ease-in-out ;
+ }
+ 
+ @keyframes loading21 {
+    0%{
+        transform: rotate(-10deg);
+        opacity: 0.9;
+      
+    }
+  
+    25%{
+      transform: rotate(-50deg);
+      
+      opacity: 0.5;
+    }
+    75%{
+      transform: rotate(-150deg);
+      opacity: 0.2;
+    }
+    100%{
+      transform: rotate(-360deg);
+      
+      opacity: 0.1;
+    }
+  }
+
+  .item22{
+
+    animation: loading22 0.7s infinite;
+    animation-fill-mode:forwards;
+    transition: all 2s ease-in-out ;
+ }
+ 
+ @keyframes loading22 {
+    0%{
+        transform: rotate(-10deg);
+        opacity: 0.9;
+      
+    }
+  
+    25%{
+      transform: rotate(-50deg);
+      
+      opacity: 0.5;
+    }
+    75%{
+      transform: rotate(-150deg);
+      opacity: 0.2;
+    }
+    100%{
+      transform: rotate(-360deg);
+      
+      opacity: 0.1;
+    }
+  }
+
+
+  .item23{
+
+    animation: loading23 0.7s infinite;
+    animation-fill-mode:forwards;
+    transition: all 2s ease-in-out ;
+ }
+ 
+ @keyframes loading23 {
+    0%{
+        transform: rotate(-10deg);
+        opacity: 0.9;
+      
+    }
+  
+    25%{
+      transform: rotate(-50deg);
+      
+      opacity: 0.5;
+    }
+    75%{
+      transform: rotate(-150deg);
+      opacity: 0.2;
+    }
+    100%{
+      transform: rotate(-360deg);
+      
+      opacity: 0.1;
+    }
+  }
+
+  .item-3 p{
+    font-size: 100px;
+    
+}
+.dot1,.dot2,.dot3{
+    color:transparent ;
+    transition: all 2s ease-in-out ;
+}
+.dot1{
+    
+    animation: loading31 0.5s infinite;
+    animation-fill-mode:forwards;
+    animation-direction: normal;
+    
+}
+@keyframes loading31{
+    10%{ 
+        color: rgb(243, 204, 204); 
+    }
+    50%{
+        color: rgb(237, 137, 137);
+        opacity: 0.5;
+    }
+    100%{
+        color: red;
+        opacity: 0.9;
+    }
+  
+}
+
+.dot2{
+   
+    animation: loading32 0.5s infinite;
+    animation-fill-mode:forwards;
+}
+
+@keyframes loading32{
+    10%{ 
+        color: rgb(212, 246, 190); 
+    }
+    50%{
+        color: rgb(106, 224, 73);
+        opacity: 0.5;
+    }
+    100%{
+        color: rgb(19, 248, 11);
+        opacity: 0.9;
+    }
+  
+}
+
+.dot3{
+    
+    animation: loading33 0.5s infinite;
+    animation-fill-mode:forwards;
+}
+
+@keyframes loading33{
+    10%{ 
+        color: yellow; 
+        opacity: 0.1;
+    }
+    50%{
+        color: yellow;
+        opacity: 0.5;
+    }
+    100%{
+        color: yellow;
+        opacity: 0.9;
+    }
+  
+}
+.loading4{
+    font-size: 50px;
+    color: aqua;
+    animation: loading4 0.5s infinite forwards;
+    transition: all 2s ease-in-out ;
+}
+@keyframes loading4{
+    form{
+     transform: skew(10deg);
+     color: aquamarine;
+    }
+    to{
+     transform: skew(15deg);
+     color: blueviolet;
+    }
+  
+}
+
+.loading5{
+    font-size: 50px;
+    color: aqua;
+    animation: loading5 0.5s infinite forwards;
+    transition: all 2s ease-in-out ;
+}
+@keyframes loading5{
+    0%{ 
+        transform: translate(60px);
+        opacity: 0.9;
+    }
+  
+    25%{
+        transform: translate(70px);
+      opacity: 0.5;
+
+    }
+    75%{
+      transform: translate(100px);
+      opacity: 0.3;
+    }
+    100%{
+      transform: translate(170px);
+      opacity: 0.1;
+    }
+  
+}
+
+.loading6{
+    color: gray;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: loading6 0.7s infinite;
+    transition: all 2s ease-in-out ;
+}
+
+@keyframes loading6{
+    0%{ 
+        opacity: 0.1;
+    }
+  
+    25%{
+      opacity: 0.2;
+    }
+    75%{
+      opacity: 0.5;
+    }
+    100%{
+      opacity: 0.9;
+    }
+}
+
+
+
+
 
 /* RESPONSIVE DESING*/ 
 
@@ -103,4 +403,9 @@
         width: 600px;
     } 
 }
+
+
+
+
+
 
